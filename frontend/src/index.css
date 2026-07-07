@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-darkbg: #090d16;
+  --color-darkcard: #121824;
+  --color-darkborder: #1f293d;
+  --color-brandblue: #3b82f6;
+  --color-brandcyan: #06b6d4;
+  --color-brandpurple: #8b5cf6;
+  --font-sans: 'Inter', 'system-ui', 'sans-serif';
+}
+
+body {
+  @apply bg-darkbg text-slate-100 font-sans antialiased;
+  margin: 0;
+}
+
+/* Custom scrollbars for a premium dark mode look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Smooth fade transitions */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+/* Neon glassmorphism effects */
+.glass-panel {
+  background: rgba(18, 24, 36, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(31, 41, 61, 0.6);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
